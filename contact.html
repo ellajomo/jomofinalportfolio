@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ella Contact</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+</head>
+<body>
+	    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+
+	<header>
+		<nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="contact.html" class = 'current'>Contact</a></li>
+          <li><a href="about.html">About</a></li>
+
+        </ul>
+      </nav>
+		<h1>Subscribe to Weekly Newsletter</h1>
+	</header>
+	<main id= 'main'>
+		<!-- <form action="/action_page.php">
+			Your name <input type="text" id = '#nameid' name="name">
+			<br>
+ 			 I would like to subscribe <input type="checkbox" id = '#sub'name="Subscribe" value="Yes"><br>
+  			<input type="submit" value="Submit">
+		</form> -->
+		<form action="https://formspree.io/myyyyalk" method="POST">
+			<div class = 'formcontainer'>
+  	<label>
+    Your email:
+    <input type="text" name="_replyto">
+  </label>
+  <label>I would like to subscribe <input type="checkbox" id = '#sub' name="Subscribe" value="Yes"></label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+
+  <!-- your other form fields go here -->
+
+  <button type="submit">Send</button>
+</div>
+</form>
+<div class='contactgallery'>
+	<img src="images/avocado.jpg" alt = "avocado">
+	<img src="images/vegplatter.jpg" alt = "veggieplatter">
+	<img src="images/burgerplatter.jpg" alt = "burgerplatter">
+	<img src="images/breakfastboard.jpg" alt = "breakfastboard">
+	<img src="images/lattes.jpg" alt = "lattes">
+
+
+<!-- 	rememebr alt text
+grid template rows 1fr 1fr 1fr 1fr 1fr in style sheet -->
+</div>
+	</main>
+	<footer>	<p>&copy; Ella Jomo 2019</p>
+</footer>
+</body>
+</html>
+

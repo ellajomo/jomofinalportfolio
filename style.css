@@ -1,0 +1,271 @@
+style.css
+/*body{
+	font-family: "Quicksand", sans-serif;
+	background-image: url("../images/background.jpg");
+	background-attachment: fixed;
+	background-color: #dddddd;
+	background-repeat: no-repeat;
+}*/
+body{
+	font-family: 'Muli', sans-serif;
+/*	margin: 20px;
+*//*	background-color: #7DE6A3;
+*/}
+html{
+	background-color: #CDF9EC;
+	font-family: 'Muli';
+    font-size: 22px /* FIX FONT */;
+
+}
+
+
+.skip a{
+	position: relative;
+	left: -2000px;
+}
+
+.skip a:focus{
+	position: static;
+}
+main p{
+	text-align: center;
+	margin: -1px
+/*	list-style: none;
+*/
+}
+
+.row {
+  display: flex;
+/*  flex-wrap: wrap;
+*/  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+.recipestyle{
+	height: 200px; 
+	width: 200px;
+}
+.contactgallery{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	jusitfy-items: center;
+}
+
+	
+
+
+/*.background{
+	background-image: url("../images/background.jpg");
+	background-position: : center;
+	background-color: #dddddd;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+
+}*/
+.homehtml{
+	background-image: url("../images/background.jpg");
+	background-position: : center;
+	background-color: #dddddd;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Muli';font-size: 22px
+/*	FIX FONT
+*/
+}
+footer{
+	text-align: center;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	color: black;
+	background-color: white;
+	min-height: 60px;
+}
+footer p{
+	text-align: center;
+}
+
+.current{
+	color: black;
+	text-decoration: underline;
+
+}
+
+.gallery{
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-items: center;
+
+}
+
+h2{ 
+	text-align: center;
+	 }
+h1{
+	text-align: center;
+}
+
+.gallery div{
+	border: 2px solid pink
+	margin: 0 auto;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+	overflow: hidden;
+	background-color: transparent;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 300px;
+	height: 200px;
+	border: 1px solid #f1f1f1;
+	perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: pink;
+  color: black;
+  transform: rotateY(180deg);
+}
+.formcontainer{
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-items: center;
+	grid-row-gap: 10px; 
+}
+	
+nav ul {
+	list-style: none;
+}
+
+nav ul li{
+	padding: 2%;
+	display: inline;
+	
+}
+nav ul li a{
+	text-decoration: none;
+
+}
+nav ul{
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+@media all and (min-width: 600px){
+	nav ul{
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+}
+@media screen and (min-width: 1000px) /*fullscreen*/{
+	.gallery{
+	grid-template-columns: 1fr 1fr;
+
+}
+.anim div{
+	display: block;
+	width: 200%;
+	height: 55px;
+	position: absolute;
+	overflow: hidden;
+	animation: anim 5s linear infinite;
+
+
+}
+.anim{
+	height: 50px;
+	overflow: hidden;
+	position: relative;
+}
+
+.anim h1 {
+	float: left;
+	width: 50%;
+	margin: -10px;
+}
+@keyframes anim{
+	0% { left: 0; }
+	100% { left: -100%; }
+}
+
+} 
+
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+  .row{
+  	flex-wrap: wrap;
+  	justify-content: center;
+  }
+  .contactgallery{
+	display: grid;
+	grid-template-columns: 1fr;
+	jusitfy-items: center;
+}
+}
+@media screen and (prefers-reduced-motion: reduce) {
+	.anim div{
+		animation: anim 0s linear infinite;
+	}
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+/*@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }*/
+
